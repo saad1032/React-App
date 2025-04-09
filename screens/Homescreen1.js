@@ -1,9 +1,9 @@
 
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Pressable, Touchable, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function Homescreen1() {
+export default function Homescreen1({navigation}) {
   return (
     <View style={styles.container}>
         <View style={styles.Header}>
@@ -18,10 +18,12 @@ export default function Homescreen1() {
        <View style={styles.features}>
             <Text style={styles.Ftext}>Features</Text>
             <View style={styles.grid}>
+              <TouchableOpacity onPress={()=> navigation.navigate("SubScreen")}>
               <View style={styles.card}>
                 <Ionicons name="book-outline" size={40} color="black" />
                 <Text style={styles.cardText}>Read Quran</Text>
               </View>
+              </TouchableOpacity>
               <View style={styles.card}>
                 <Ionicons name="search-outline" size={40} color="black" />
                 <Text style={styles.cardText}>Search</Text>

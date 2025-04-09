@@ -88,9 +88,4 @@ const styles = StyleSheet.create({
   },
   cardText: { fontSize: 16, marginTop: 10 },
 });
-export default function Homescreen1() {
-    return (
 
-
-    );
-}
